@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 5*</h1>
+  <p>
+    Визначити, яку платню одержить на фірмі сумісник за виконану роботу, якщо йому нараховано S грн., а
+    податок становить 20%.
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let humanSallary = parseFloat(prompt("Введите вашу зарплату", 0))
+    const TAX = 0.2
+
+    //2.Знаходимо результат
+    let sallaryTax = humanSallary * TAX
+    let sallaryWithTax = humanSallary - sallaryTax
+
+    //3.Виводимо результа
+    document.write(`
+      
+        <table border="2px">
+          <tr>
+              <th>Шуканий результат</th>
+              <th>Отримане значення</th>
+          </tr>
+          <tr>
+              <th>Зарплта людини :</th>
+              <td>${humanSallary}</td>
+           </tr>
+           <tr>
+              <th>Податок (%):</th>
+              <td>${TAX * 100} %</td>
+           </tr>
+           <tr>
+              <th>Податок від зарплати :</th>
+              <td>${sallaryTax} грн</td>
+           </tr>
+          <tr>
+              <th>Зарплата людини з податками :</th>
+              <td>${sallaryWithTax} грн</td>
+           </tr>
+           
+        </table>
+      `)
+
+
+
+
+  </script>
+</body>
+
+</html>

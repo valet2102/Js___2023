@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 2</h1>
+    <p>Дано рік народження (дата: 1 січня) та поточний рік. Знайти кількість років.
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let userDate = parseInt(prompt("Введите год рождения", 0))
+        let currentDate = new Date().getFullYear()
+
+
+
+        //2.Знаходимо результат
+        let userAge = currentDate - userDate
+
+
+
+
+
+
+
+
+
+        //3.Виводимо результа
+        document.write(`
+       
+            <table border="2px">
+              <tr>
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+              </tr>
+              <tr>
+                  <th> Поточний рік: </th>
+                  <td>${currentDate}</td>
+              </tr>
+              <tr>
+                  <th>  Рік народження користувача: </th>
+                  <td>${userDate}</td>
+              </tr>
+              <tr>
+                  <th> Кількість років користувача</th>
+                  <td>${userAge} </td>
+              </tr>
+             
+            </table>
+            
+          `)
+
+
+
+
+    </script>
+</body>
+
+</html>

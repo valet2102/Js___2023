@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 3*</h1>
+  <p>
+    З клавіатури вводяться вартість одиниці та кількість одиниць двох товарів. Вивести на екран вартість
+    кожного з видів товарів окремо і загальну вартість.
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let firstPrice = parseFloat(prompt("Введите цену первого товара", 0))
+    let firstQuantity = parseFloat(prompt("Введите количество первого товара", 0))
+
+    let secondPrice = parseFloat(prompt("Введите цену второго товара", 0))
+    let secondQuantity = parseFloat(prompt("Введите количество второго товара", 0))
+
+    //2.Знаходимо результат
+    let firstItemFullPrice = firstPrice * firstQuantity
+    let secondItemFullPrice = secondPrice * secondQuantity
+    let fullPrice = firstItemFullPrice + secondItemFullPrice
+    //3.Виводимо результа
+    document.write(`
+                  <p>
+                  Введені значення:<br>
+                  Вартість першого товару: ${firstPrice} <br>Кількість першого товару: ${firstQuantity}
+                 <br><br>
+                  Вартість другого товару: ${secondPrice}<br> Кількість другого товару: ${secondQuantity}<br> 
+                                          
+                  </p>
+
+        <table border="2px">
+          <tr>
+              <th>Шуканий результат</th>
+              <th>Отримане значення</th>
+          </tr>
+          <tr>
+              <th> Вартість всіх перших товарів</th>
+              <td>${firstItemFullPrice}</td>
+           </tr>
+           <tr>
+              <th> Вартість всіх других товарів</th>
+              <td>${secondItemFullPrice}</td>
+           </tr>
+           <tr>
+              <th> Вартість всіх товарів</th>
+              <td>${fullPrice}</td>
+           </tr>
+        
+        </table>
+            
+      `)
+
+
+
+
+  </script>
+</body>
+
+</html>

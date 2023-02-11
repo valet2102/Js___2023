@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 8*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 8*</h1>
+  <p>
+    Розробити програму (не використовувати if), яка за номером року Y визначає номер століття C (врахувати,
+    що початком XX століття був 1901, а не 1900 рік).
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let date = parseInt(prompt("Введите дату", 0))
+    const CHECK_NUMBER = 100.00001
+
+    //2.Знаходимо результат
+    let centurie = parseInt(date / CHECK_NUMBER + 1)
+
+    //3.Виводимо результа
+    document.write(`
+        
+        <table border="2px">
+          <tr>
+              <th>Шуканий результат</th>
+              <th>Отримане значення</th>
+          </tr>
+          <tr>
+              <th> Введена дата</th>
+              <td>${date}</td>
+           </tr>
+           
+           <tr>
+              <th>  Століття дати</th>
+              <td>${centurie}</td>
+           </tr>
+           
+        </table>
+      `)
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 6</h1>
+    <p>
+        З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо
+        та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let firstPrice = parseFloat(prompt("Введите цену первого товара", 0))
+        let firstQuantity = parseFloat(prompt("Введите количество первого товара", 0))
+
+        let secondPrice = parseFloat(prompt("Введите цену второго товара", 0))
+        let secondQuantity = parseFloat(prompt("Введите количество второго товара", 0))
+
+        let thirdPrice = parseFloat(prompt("Введите цену третьего товара", 0))
+        let thirdQuantity = parseFloat(prompt("Введите количество третьего товара", 0))
+
+
+
+        //2.Знаходимо результат
+
+
+
+
+        let sum1 = firstPrice * firstQuantity
+        let sum2 = secondPrice * secondQuantity
+        let sum3 = thirdPrice * thirdQuantity
+        let sum = sum1 + sum2 + sum3
+
+
+
+
+
+        //3.Виводимо результа
+        document.write(`
+            <p>
+                Введені значення:<br>
+                Вартість першого товару: ${firstPrice} <br>Кількість першого товару: ${firstQuantity} <br>Загальна вартість перших товарів: ${sum1}<br>
+                <br><br>
+                 Вартість другого товару: ${secondPrice}<br> Кількість другого товару: ${secondQuantity}<br> Загальна вартість других товарів: ${sum2}<br>
+                 <br><br>
+                 Вартість третього товару: ${thirdPrice} <br>Кількість третього товару: ${thirdQuantity}<br> Загальна вартість третіх товарів: ${sum3}<br>
+                 <br><br>
+                 Загальна кількість всіх товарів:  ${firstQuantity + secondQuantity + thirdQuantity}<br> Загальна вартість всіх товарів:  ${sum}
+              
+                </p>
+            
+          `)
+
+
+
+
+    </script>
+</body>
+
+</html>

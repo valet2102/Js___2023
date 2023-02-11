@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 4*</h1>
+  <p>
+    З клавіатури вводиться вік дитини. Вивести на екран через скільки років вона буде відвідувати садочок,
+    піде у школу, закінчить школу, вступить і закінчить
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let childAge = parseFloat(prompt("Введите возраст ребенка", 0))
+
+    const KINDERGARTE_START = 3
+    const KINDERGARTE_END = 6
+    const SCHOOL_START = 7
+    const SCHOOL_END = 17
+    const UNIVERSITY_START = 18
+    const UNIVERSITY_END = 23
+
+    //2.Знаходимо результат
+    let yearTillKindergartenStart = KINDERGARTE_START - childAge
+    let yearTillKindergartenEnd = KINDERGARTE_END - childAge
+    let yearTillSchoolStast = SCHOOL_START - childAge
+    let yearTillSchoolEnd = SCHOOL_END - childAge
+    let yearTillUniversityStast = UNIVERSITY_START - childAge
+    let yearTillUniversityEnd = UNIVERSITY_END - childAge
+
+
+    //3.Виводимо результа
+    document.write(`
+        <p>
+            Введені значення:<br>
+          Вік дитини: ${childAge}
+            </p>
+        <table border="2px">
+          <tr>
+              <th>Шуканий результат</th>
+              <th>Отримане значення </th>
+              <th>Вік початку та закінчення закладу</th>
+          </tr>
+          <tr>
+              <th> Років до початку садочка</th>
+              <td>${yearTillKindergartenStart}</td>
+              <td>${KINDERGARTE_START} років</td>
+           </tr>
+           
+           <tr>
+              <th>  Років до закінчення садочка </th>
+              <td>${yearTillKindergartenEnd}</td>
+              <td>${KINDERGARTE_END} років</td>
+           </tr>
+           <tr>
+              <th> Років до початку школи</th>
+              <td>${yearTillSchoolStast}</td>
+              <td>${SCHOOL_START} років</td>
+          </tr>
+          <tr>
+              <th> Років до закінчення школи </th>
+              <td>${yearTillSchoolEnd}</td>
+              <td>${SCHOOL_END} років</td>
+          </tr>
+          <tr>
+              <th> Років до початку універу</th>
+              <td>${yearTillUniversityStast}</td>
+              <td>${UNIVERSITY_START} років</td>
+          </tr>
+          <tr>
+              <th>Років до закінчення універу</th>
+              <td>${yearTillUniversityEnd}</td>
+              <td>${UNIVERSITY_END} років</td>
+          </tr>
+          
+        </table>
+      `)
+
+
+
+
+  </script>
+</body>
+
+</html>
