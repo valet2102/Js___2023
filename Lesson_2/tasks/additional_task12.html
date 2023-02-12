@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 12*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 12*</h1>
+  <p>
+    З клавіатури вводиться кількість монет номіналом 2 копійки (5коп, 25коп, 50 коп). Визначити скільки
+    гривень і копійок є у даній сумі.
+
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+
+    let quantityOfTwoKopeck = parseInt(prompt("Введите количество копеёк наминалом в 2", 0))
+    let quantityOfFiveKopeck = parseInt(prompt("Введите количество копеёк наминалом в 5", 0))
+    let quantityOfTwentyFiveKopeck = parseInt(prompt("Введите количество копеёк наминалом в 25", 0))
+    let quantityOfFiftyKopeck = parseInt(prompt("Введите количество копеёк наминалом в 50", 0))
+
+    const TWO_KOPECK = 2
+    const FIVE_KOPECK = 5
+    const TWENTY_FIVE_KOPECK = 25
+    const FIFTY_KOPECK = 50
+    const CHECK_HRYVNIA = 100
+
+    //2.Знаходимо результат
+
+    let totalSum = TWO_KOPECK * quantityOfTwoKopeck + FIVE_KOPECK * quantityOfFiveKopeck + TWENTY_FIVE_KOPECK * quantityOfTwentyFiveKopeck + FIFTY_KOPECK * quantityOfFiftyKopeck
+    let quantityOfHryvnia = parseInt(totalSum / CHECK_HRYVNIA)
+    let quantityOfKopeck = parseInt(totalSum % CHECK_HRYVNIA)
+
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                Количество копеёк наминалом в (2) : ${quantityOfTwoKopeck} <br>
+                Количество копеёк наминалом в (5) : ${quantityOfFiveKopeck}  <br>
+                Количество копеёк наминалом в (25) : ${quantityOfTwentyFiveKopeck}  <br>
+                Количество копеёк наминалом в (50) : ${quantityOfFiftyKopeck} <br>
+             </p> 
+             <table border="2px">
+             <tr>
+                 
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                 
+                  <td> Cкільки гривень і копійок є у даній сумі </td>
+                  <td>${quantityOfHryvnia} : гривень ${quantityOfKopeck} : копійок</td>
+                 
+              </tr>
+             
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>

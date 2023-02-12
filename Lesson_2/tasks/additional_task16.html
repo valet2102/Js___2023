@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 16*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 16*</h1>
+  <p>
+    З клавіатури вводиться номер місяця. Визначити, який буде місяць через вказану кількість N місяців.
+
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let numberOfMonth = parseInt(prompt("Введите номер месяца (от 1 до 12)", 0))
+    let quantityOfMonth = parseInt(prompt("Введите количество месяцев", 0))
+
+    const CHECK_MONTH = 12.00000001
+
+    //2.Знаходимо результат
+
+    let userNumberOfMonth = Math.ceil((numberOfMonth + quantityOfMonth) % CHECK_MONTH)
+
+
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                Номер месяца : ${numberOfMonth} <br>
+                Количество месяцев : ${quantityOfMonth}  <br>
+               
+             </p> 
+             <table border="2px">
+             <tr>
+                 
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                 
+                <td> Визначити який буде день місяць через ${quantityOfMonth} дні <br> якщо зараз ${numberOfMonth} день неділі</td>
+                  <td>${userNumberOfMonth} : місяць року</td>
+                 
+              </tr>
+             
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>

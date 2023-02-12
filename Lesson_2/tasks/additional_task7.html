@@ -21,8 +21,9 @@
     const CHECK_NUMBER = 1
 
     //2.Знаходимо результат
-    let number = parseInt(userNumber)
-    let fractional = userNumber % CHECK_NUMBER
+
+    let number = parseInt(userNumber) //можна и Math.floor() ,но тогда не будут работать отрицатльные числа
+    let fractional = userNumber - number
 
     //3.Виводимо результа
     document.write(`

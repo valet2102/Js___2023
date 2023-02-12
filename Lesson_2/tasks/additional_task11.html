@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 11*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 11*</h1>
+  <p>
+    Дано поточну кількість годи, хвилин, секунд (як на годиннику). Визначити <br>
+    1. яка кількість секунд буде на годиннику через N секунд.<br>
+    2. яка кількість хвилин буде на годиннику через N секунд, X хвилин.
+
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let quantityOfSeconds = parseInt(prompt("Введите количество секунд", 0))
+    let quantityOfMinutes = parseInt(prompt("Введите количество минут", 0))
+
+    let hours = new Date().getHours()
+    let minutes = new Date().getMinutes()
+    let seconds = new Date().getSeconds()
+
+    const SECONDS_IN_MINUTES = 60
+    const SECONDS_IN_HOURS = 3600
+
+
+
+
+    //2.Знаходимо результат
+
+    let currentTimeSeconds = hours * SECONDS_IN_HOURS + minutes * SECONDS_IN_MINUTES + seconds
+    let taskOneQuantityOfSeconds = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
+    let taskTwoQuantityOfMinutes = parseInt(((currentTimeSeconds + (quantityOfMinutes * SECONDS_IN_MINUTES) + quantityOfSeconds) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
+
+
+    // Новий час з 1 завдання
+    let firstTaskHour = parseInt((currentTimeSeconds + quantityOfSeconds) / SECONDS_IN_HOURS)
+    let firstTaskMinute = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
+    let firstTaskSecond = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
+    // Новий час з 2 завдання
+    let secondtTaskHour = parseInt((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) / SECONDS_IN_HOURS)
+    let secondTaskMinute = parseInt(((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
+    let secondTaskSecond = parseInt(((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
+
+
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                1. яка кількість секунд буде на годиннику через ${quantityOfSeconds} секунд.<br>
+                2. яка кількість хвилин буде на годиннику через ${quantityOfSeconds} секунд, ${quantityOfMinutes} хвилин.<br>
+             
+             </p> 
+             <table border="2px">
+             <tr>
+                  <th>Шуканий результат</th>
+                  <th>Початковий час</th>
+                  <th>Отриманий час</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                  <th> 1) Кількість секунд </th>
+                  <td>${hours} годин : ${minutes} хвилин : ${seconds} : секунд </td>
+                  <td>${firstTaskHour} годин : ${firstTaskMinute} хвилин : ${firstTaskSecond} : секунд </td>
+                  <td>${taskOneQuantityOfSeconds} : секунд </td>
+                 
+              </tr>
+              <tr>
+                  <th> 2) Кількість хвилин </th>
+                  <td>${hours} годин : ${minutes} хвилин : ${seconds} : секунд </td>
+                  <td>${secondtTaskHour} годин : ${secondTaskMinute} хвилин : ${secondTaskSecond} : секунд </td>
+                  <td>${taskTwoQuantityOfMinutes} : хвилин </td>
+                 
+              </tr>
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>

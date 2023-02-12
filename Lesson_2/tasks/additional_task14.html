@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 14*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 14*</h1>
+  <p>
+    З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити який буде день тижня через N днів.
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+
+    let numberOfDay = parseInt(prompt("Введите номер дня (от 1 до 7)", 0))
+    let quantityOfDay = parseInt(prompt("Введите количество дней", 0))
+
+    const CHECK_WEEK = 7.000000001
+
+    //2.Знаходимо результат
+
+    let dayOfWeek = Math.ceil((numberOfDay + quantityOfDay) % CHECK_WEEK)
+
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                Номер дня : ${numberOfDay} <br>
+                Количество дней : ${quantityOfDay}  <br>
+                
+             </p> 
+             <table border="2px">
+             <tr>
+                 
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                 
+                  <td> Визначити який буде день тижня через ${quantityOfDay} дні <br> якщо зараз ${numberOfDay} день неділі</td>
+                  <td>${dayOfWeek} : день неділі</td>
+                 
+              </tr>
+             
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>

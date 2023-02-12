@@ -19,15 +19,20 @@
   <script>
     //1.Вводимо необхідні дані
     let date = parseInt(prompt("Введите дату", 0))
-    const CHECK_NUMBER = 100.00001
+    const CHECK_NUMBER = 100.00000001
 
     //2.Знаходимо результат
-    let centurie = parseInt(date / CHECK_NUMBER + 1)
+
+
+    let centurie = Math.floor(date / CHECK_NUMBER + 1)
+    // можно так же и через parseInt эффект будет тот же
+    //let centurie = parseInt(date / CHECK_NUMBER + 1)
 
     //3.Виводимо результа
     document.write(`
         
         <table border="2px">
+         
           <tr>
               <th>Шуканий результат</th>
               <th>Отримане значення</th>

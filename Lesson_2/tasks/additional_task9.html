@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 9*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 9*</h1>
+  <p>
+    Скласти програму для розв’язування задачі: йде N-а секунда доби, визначити скільки повних годин і повних хвилин
+    пройшло до цього моменту.
+
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+    let seconds = parseInt(prompt("Введите количество секунд", 0))
+    const SECONDS_TO_MINUTES = 60
+    const SECONDS_TO_HOURS = 3600
+
+    //2.Знаходимо результат
+
+
+
+    let hourInNumber = parseInt(seconds / SECONDS_TO_HOURS)
+    let minInNumber = parseInt((seconds % SECONDS_TO_HOURS) / SECONDS_TO_MINUTES)
+    let secondsInNumber = parseInt((seconds % SECONDS_TO_HOURS) % SECONDS_TO_MINUTES)
+
+
+
+
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                Загальна кількість секунд = ${seconds} <br>
+                
+              
+                </p>
+            <table border="2px">
+              <tr>
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+              </tr>
+              <tr>
+                  <th> Кількість годин </th>
+                  <td>${hourInNumber} </td>
+              </tr>
+              <tr>
+                  <th> Кількість хвилин</th>
+                  <td>${minInNumber} </td>
+              </tr>
+              <tr>
+                  <th>Введений час</th>
+                  <td>${hourInNumber} годин : ${minInNumber} хвилин : ${secondsInNumber} секунд </td>
+              </tr>
+
+             
+            </table>
+          `)
+
+
+
+
+
+  </script>
+</body>
+
+</html>

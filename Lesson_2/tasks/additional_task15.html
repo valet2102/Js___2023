@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 15*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 15*</h1>
+  <p>
+    З клавіатури вводиться кількість місяців, які пройшли від деякого моменту часу. Вивести повну кількість років і
+    місяців. Наприклад, дано 28 місяців, а вивести 2 роки і 4 місяці.
+
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+
+    let quantityOfMonth = parseInt(prompt("Введите количество месяцев", 0))
+
+    const CHECK_YEAR = 12
+
+    //2.Знаходимо результат
+
+    let years = parseInt(quantityOfMonth / CHECK_YEAR)
+    let months = parseInt(quantityOfMonth % CHECK_YEAR)
+    //3.Виводимо результа
+    document.write(`
+            <p>
+                Введені значення:<br>
+                Кількість місяців : ${quantityOfMonth} <br>
+               
+             </p> 
+             <table border="2px">
+             <tr>
+                 
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                 
+                  <td> Кількість років у ${quantityOfMonth} місяцях </td>
+                  <td>${years}: рік  ${months}: місяці</td>
+                 
+              </tr>
+             
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 13*</title>
+</head>
+
+<body>
+  <a href="../index.html">Back to tasks</a>
+  <h1>Задача 13*</h1>
+  <p>
+    Визначити скільки повних тижнів є у вказаній кількості днів.
+  </p>
+  <script>
+    //1.Вводимо необхідні дані
+
+    let quantityOfDyas = parseInt(prompt("Введите количество дней", 0))
+
+    const CHECK_WEEK = 7
+
+    //2.Знаходимо результат
+
+    let quantityOfWeeks = parseInt(quantityOfDyas / CHECK_WEEK)
+
+    //3.Виводимо результа
+    document.write(`
+           
+             <table border="2px">
+             <tr>
+                 
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+                 
+                
+              </tr>
+              <tr>
+                 
+                  <td> Повна кількість днів </td>
+                  <td>${quantityOfDyas} : днів </td>
+                 
+              </tr>
+              <tr>
+                 
+                 <td> Повна кількість тижнів у ${quantityOfDyas} днях </td>
+                 <td>${quantityOfWeeks} : тижнів</td>
+                
+             </tr>
+             
+             
+            </table>
+          `)
+
+
+
+
+  </script>
+</body>
+
+</html>
