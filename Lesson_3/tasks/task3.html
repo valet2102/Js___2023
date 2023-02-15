@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 3</h1>
+    <p>
+        Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+
+    </p>
+    <hr>
+    <script>
+        //1.Вводимо необхідні дані
+        // let price = parseFloat(prompt("Введите цену товара", 0))
+        // let quantity = parseFloat(prompt("Введите количество товара", 0))
+        const minNumber = 1
+        const maxNumber = 5
+        let randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+
+        let userNumber = parseInt(prompt("Угадайте число (1 - 5) за 2 попытки", 0))
+        if (userNumber == randomNumber)
+            document.write(`Вы угадали с первой попытки число ${randomNumber}`)
+        else {
+            userNumber = parseInt(prompt("Вы не угадали,попробуйте еще раз))", 0))
+            if (userNumber == randomNumber)
+                document.write(`Вы угадали с второй попытки число ${randomNumber}`)
+            else
+                document.write(`Вы не угадали число ${randomNumber} за 2 попытки`)
+        }
+
+        document.write("<hr>")
+        randomNumber = minNumber + Math.floor(Math.random() * (maxNumber - minNumber + 1))
+
+
+        userNumber = parseInt(prompt("Попробуйте угадайть число (1 - 5) за 2 попытки еще раз", 0))
+        if (userNumber != randomNumber) {
+            userNumber = parseInt(prompt("Вы не угадали,попробуйте еще раз))", 0))
+            if (userNumber != randomNumber)
+                document.write(`Вы не угадали число ${randomNumber} за 2 попытки`)
+            else
+                document.write(`Вы угадали с второй попытки число ${randomNumber}`)
+        }
+        else
+            document.write(`Вы угадали с второй попытки число ${randomNumber}`)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

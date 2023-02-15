@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 4</h1>
+    <p>
+        З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом,
+        працівником, пенсіонером).
+
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let userAge = parseInt(prompt("Введите ваш возраст", 0))
+        const childAge = 2
+        const kindergartenAge = 6
+        const schooldAge = 17
+        const universityAge = 23
+        const workdAge = 60
+        const insaneAge = 100
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+
+
+        if (userAge < childAge)
+            document.write(`В вашем возрасте ${userAge} лет вы ребенок`)
+        else if (userAge >= childAge && userAge < kindergartenAge)
+            document.write(`В вашем возрасте ${userAge} лет вы ребенок в садике`)
+        else if (userAge >= kindergartenAge && userAge < schooldAge)
+            document.write(`В вашем возрасте ${userAge} лет вы школьник`)
+        else if (userAge >= schooldAge && userAge < universityAge)
+            document.write(`В вашем возрасте ${userAge} лет вы студент`)
+        else if (userAge >= universityAge && userAge < workdAge)
+            document.write(`В вашем возрасте ${userAge} лет вы работник`)
+        else if (userAge >= workdAge && userAge < insaneAge)
+            document.write(`В вашем возрасте ${userAge} лет вы пенсионер`)
+        else if (userAge >= insaneAge)
+            document.write(`В вашем возрасте ${userAge}лет, вы прожили больше века!!!`)
+        else
+            document.write('Введите корректный возраст')
+
+
+
+
+    </script>
+</body>
+
+</html>

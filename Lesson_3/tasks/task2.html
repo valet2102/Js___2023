@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 2</h1>
+    <p>
+        З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то відмовляємо у покупці, інакше,
+        якщо ще залишаються гроші, то пропонуємо купити лотерею за 4 грн.
+
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let itemPrice = parseFloat(prompt("Введите цену товара", 0))
+        let userMoney = parseFloat(prompt("Введите количество денег", 0))
+        const LOTTERY_PRICE = 4
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+        if (userMoney < itemPrice)
+            document.write(`У вас недостаточно средств`)
+        else
+            if (userMoney >= itemPrice + LOTTERY_PRICE)
+                document.write(`У вас достаточно средств, что бы оплатить товар<br>,не желаете еще кипить лоторейный билет за 4грн`)
+            else
+                document.write(`У вас достаточно средств, что бы оплатить товар`)
+
+
+
+
+
+
+        document.write(`
+       
+            <table border="2px">
+              <tr>
+                  <th>Шуканий результат</th>
+                  <th>Отримане значення</th>
+              </tr>
+              <tr>
+                  <th> Поточний рік: </th>
+                  <td>${currentDate}</td>
+              </tr>
+              <tr>
+                  <th>  Рік народження користувача: </th>
+                  <td>${userDate}</td>
+              </tr>
+              <tr>
+                  <th> Кількість років користувача</th>
+                  <td>${userAge} </td>
+              </tr>
+             
+            </table>
+            
+          `)
+
+
+
+
+    </script>
+</body>
+
+</html>
