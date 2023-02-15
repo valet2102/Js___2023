@@ -23,10 +23,13 @@
     let userSymbol = prompt("Введите символ (А ,B  ..., Z)", "A")
     let userShift = parseInt(prompt("Введите код сдвига", 3))
 
+    const MIN_SYMBOL = "A".charCodeAt()
+    const MAX_SYMBOL = "Z".charCodeAt()
 
 
     //2.Знаходимо результат
-    let userSymbolCode = userSymbol.charCodeAt() + userShift
+
+    let userSymbolCode = (userSymbol.charCodeAt() + userShift - MIN_SYMBOL) % (MAX_SYMBOL - MIN_SYMBOL + 1) + MIN_SYMBOL
     let newUserSymbol = String.fromCharCode(userSymbolCode)
 
 

@@ -21,11 +21,12 @@
     let numberOfMonth = parseInt(prompt("Введите номер месяца (от 1 до 12)", 0))
     let quantityOfMonth = parseInt(prompt("Введите количество месяцев", 0))
 
-    const CHECK_MONTH = 12.00000001
+    const MIN_MONTH = 1
+    const MAX_MONTH = 12
 
     //2.Знаходимо результат
 
-    let userNumberOfMonth = Math.ceil((numberOfMonth + quantityOfMonth) % CHECK_MONTH)
+    let userNumberOfMonth = (numberOfMonth - MIN_MONTH + quantityOfMonth) % MAX_MONTH + MIN_MONTH
 
 
     //3.Виводимо результа

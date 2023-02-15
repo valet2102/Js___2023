@@ -20,11 +20,11 @@
     let numberOfDay = parseInt(prompt("Введите номер дня (от 1 до 7)", 0))
     let quantityOfDay = parseInt(prompt("Введите количество дней", 0))
 
-    const CHECK_WEEK = 7.000000001
-
+    const minNumberOfDay = 1
+    const maxNumberOfDay = 7
     //2.Знаходимо результат
 
-    let dayOfWeek = Math.ceil((numberOfDay + quantityOfDay) % CHECK_WEEK)
+    let dayOfWeek = (numberOfDay - minNumberOfDay + quantityOfDay) % (maxNumberOfDay - minNumberOfDay + 1) + minNumberOfDay
 
     //3.Виводимо результа
     document.write(`

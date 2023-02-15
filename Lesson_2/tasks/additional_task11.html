@@ -27,27 +27,18 @@
     let minutes = new Date().getMinutes()
     let seconds = new Date().getSeconds()
 
-    const SECONDS_IN_MINUTES = 60
-    const SECONDS_IN_HOURS = 3600
+    const SECONDS_AND_MINUTES = 60
 
 
 
 
-    //2.Знаходимо результат
 
-    let currentTimeSeconds = hours * SECONDS_IN_HOURS + minutes * SECONDS_IN_MINUTES + seconds
-    let taskOneQuantityOfSeconds = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
-    let taskTwoQuantityOfMinutes = parseInt(((currentTimeSeconds + (quantityOfMinutes * SECONDS_IN_MINUTES) + quantityOfSeconds) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
+    // //2.Знаходимо результат
+    let currentTimeSeconds = (seconds + quantityOfSeconds) % (SECONDS_AND_MINUTES)
+
+    let currentTimeMinutes = (Math.floor((quantityOfSeconds + seconds) / SECONDS_AND_MINUTES) + quantityOfMinutes + minutes) % SECONDS_AND_MINUTES
 
 
-    // Новий час з 1 завдання
-    let firstTaskHour = parseInt((currentTimeSeconds + quantityOfSeconds) / SECONDS_IN_HOURS)
-    let firstTaskMinute = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
-    let firstTaskSecond = parseInt(((currentTimeSeconds + quantityOfSeconds) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
-    // Новий час з 2 завдання
-    let secondtTaskHour = parseInt((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) / SECONDS_IN_HOURS)
-    let secondTaskMinute = parseInt(((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) % SECONDS_IN_HOURS) / SECONDS_IN_MINUTES)
-    let secondTaskSecond = parseInt(((currentTimeSeconds + quantityOfSeconds + quantityOfMinutes * SECONDS_IN_MINUTES) % SECONDS_IN_HOURS) % SECONDS_IN_MINUTES)
 
 
     //3.Виводимо результа
@@ -62,7 +53,7 @@
              <tr>
                   <th>Шуканий результат</th>
                   <th>Початковий час</th>
-                  <th>Отриманий час</th>
+                 
                   <th>Отримане значення</th>
                  
                 
@@ -70,20 +61,20 @@
               <tr>
                   <th> 1) Кількість секунд </th>
                   <td>${hours} годин : ${minutes} хвилин : ${seconds} : секунд </td>
-                  <td>${firstTaskHour} годин : ${firstTaskMinute} хвилин : ${firstTaskSecond} : секунд </td>
-                  <td>${taskOneQuantityOfSeconds} : секунд </td>
+                
+                   <td>${currentTimeSeconds} : секунд </td>
                  
               </tr>
-              <tr>
+               <tr>
                   <th> 2) Кількість хвилин </th>
-                  <td>${hours} годин : ${minutes} хвилин : ${seconds} : секунд </td>
-                  <td>${secondtTaskHour} годин : ${secondTaskMinute} хвилин : ${secondTaskSecond} : секунд </td>
-                  <td>${taskTwoQuantityOfMinutes} : хвилин </td>
+                   <td>${hours} годин : ${minutes} хвилин : ${seconds} : секунд </td>
+                  
+                   <td>${currentTimeMinutes} : хвилин </td>
                  
-              </tr>
+               </tr>
              
-            </table>
-          `)
+             </table>
+           `)
 
 
 
