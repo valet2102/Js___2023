@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 7</h1>
+    <p>
+        З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься
+
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let monthNumber = parseInt(prompt("Введите номер месяца года (от 1 до 12)", 0))
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+        let season
+
+        // Решение с помощью Switch
+
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                season = `${monthNumber} месяц это Зима`
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = `${monthNumber} месяц это Весна`
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = `${monthNumber} месяц это Лето`
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = `${monthNumber} месяц это Осень`
+                break;
+            default:
+                season = `Введите корректную номер месяца (от 1 до 12)`
+                break;
+        }
+
+
+
+        // Решение с помощью If else 
+
+        // if (monthNumber == 1 || monthNumber == 2 || monthNumber == 12)
+        //     season = `${monthNumber} месяц это Зима`
+        // else if (monthNumber == 3 || monthNumber == 4 || monthNumber == 5)
+        //     season = `${monthNumber} месяц это Весна`
+        // else if (monthNumber == 6 || monthNumber == 7 || monthNumber == 8)
+        //     season = `${monthNumber} месяц это Лето`
+        // else if (monthNumber == 9 || monthNumber == 10 || monthNumber == 11)
+        //     season = `${monthNumber} месяц это Осень`
+        // else
+        //     season = `Введите корректную номер месяца (от 1 до 12)`
+
+        document.write(season)
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 6</h1>
+    <p>
+        З клавіатури вводиться номер дня тижня (от 1 до 7). Вивести на екран назву дня.
+
+    </p>
+    <hr>
+    <script>
+        //1.Вводимо необхідні дані
+        let dayNumber = parseInt(prompt("Введите номер дня недели (от 1 до 7)", 0))
+
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+        let dayName
+
+        // Решение с помощью Switch
+
+        switch (dayNumber) {
+            case 1:
+                dayName = "День недели : Понедельник"
+                break;
+            case 2:
+                dayName = "День недели : Вторник"
+                break;
+            case 3:
+                dayName = "День недели : Среда"
+                break;
+            case 4:
+                dayName = "День недели : Четверг"
+                break;
+            case 5:
+                dayName = "День недели : Пятница"
+                break;
+            case 6:
+                dayName = "День недели : Суббота"
+                break;
+            case 7:
+                dayName = "День недели : Воскресенье"
+                break;
+
+            default:
+                dayName = "Введите корректную номер дня (от 1 до 7)"
+                break;
+        }
+
+
+
+        // Решение с помощью If else 
+
+        // if (dayNumber == 1)
+        //     dayName = "День недели : Понедельник"
+        // else if (dayNumber == 2)
+        //     dayName = "День недели : Вторник"
+        // else if (dayNumber == 3)
+        //     dayName = "День недели : Среда"
+        // else if (dayNumber == 4)
+        //     dayName = "День недели : Четверг"
+        // else if (dayNumber == 5)
+        //     dayName = "День недели : Пятница"
+        // else if (dayNumber == 6)
+        //     dayName = "День недели : Суббота"
+        // else if (dayNumber == 7)
+        //     dayName = "День недели : Воскресенье"
+        // else
+        //     dayName = "Введите корректную номер дня (от 1 до 7)"
+
+        document.write(dayName)
+
+    </script>
+</body>
+
+</html>

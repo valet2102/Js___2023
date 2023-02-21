@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 5</h1>
+    <p>
+        З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль).
+        Вивести
+        на екран назву транспортного засобу, яким він може керувати.
+
+    </p>
+    <hr>
+    <script>
+        //1.Вводимо необхідні дані
+        let driverCategory = prompt("Введите категорию водительских прав - (A, B, C) ", "A")
+        const motorcycle = 'A'
+        const car = 'B'
+        const truck = 'C'
+        //2.Знаходимо результат
+        //3.Виводимо результа
+        let userStatus
+
+        // Решение с помощью Switch
+
+        switch (driverCategory) {
+            case motorcycle:
+                userStatus = `Вы можете водить мотоцыкл`
+                break;
+            case car:
+                userStatus = `Вы можете водить легковой автомобиль`
+                break;
+            case truck:
+                userStatus = `Вы можете водить грузовой автомобиль`
+                break;
+            default:
+                userStatus = `Введите корректную категорию`
+                break;
+        }
+
+
+
+        // Решение с помощью If else 
+
+        // if (driverCategory == motorcycle)
+        //     userStatus = `Вы можете водить мотоцыкл`
+        // else if (driverCategory == car)
+        //     userStatus = `Вы можете водить легковой автомобиль`
+        // else if (driverCategory == truck)
+        //     userStatus = `Вы можете водить грузовой автомобиль`
+        // else
+        //     userStatus = `Введите корректную категорию`
+
+        document.write(userStatus)
+
+    </script>
+</body>
+
+</html>
