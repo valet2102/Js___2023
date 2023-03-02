@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 9</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 9</h1>
+    <p>
+        Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати
+        confirm).
+
+
+
+
+    </p>
+    <script>
+
+        let minRangeUserNumber = parseInt(prompt("Введите минимальное диапазон вашего загаданого числа ", 0))
+        let maxRangeUserNumber = parseInt(prompt("Введите максимальное диапазон вашего загаданого числа ", 100))
+        const useNumber = parseInt(prompt("Введите загаданоe числo ", 0))
+        let quantityOfComputerGuesses = 0
+        let randNumber = 0
+
+        do {
+            randNumber = minRangeUserNumber + Math.floor(Math.random() * (maxRangeUserNumber - minRangeUserNumber + 1))
+            quantityOfComputerGuesses++
+            if (randNumber == useNumber)
+                break
+
+            if (confirm(`Твое число больше ${randNumber}`))
+                minRangeUserNumber = randNumber
+            else
+                maxRangeUserNumber = randNumber
+        } while (randNumber != useNumber)
+        document.write(`Я угадал ура c ${quantityOfComputerGuesses} попытки, Ваше число ${useNumber}`)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

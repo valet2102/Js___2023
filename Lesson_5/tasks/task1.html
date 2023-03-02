@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 1</h1>
+    <p> Вивести з використанням циклів маркований список з випадковими числами (1-100). Кількість випадкових чисел
+        вводиться користувачем.
+
+    </p>
+    <hr>
+    <script>
+        //1.Вводимо необхідні дані
+        let userQuantity = parseInt(prompt("Введите размер списка", 0))
+
+        const MIN_NUMBER = 1
+        const MAX_NUMBER = 100
+
+        for (let i = 0; i < userQuantity; i++) {
+            const randNumber = MIN_NUMBER + Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1))
+            document.write(`<ul><li>${randNumber}    </li></ul>`)
+        }
+
+
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+
+
+
+
+    </script>
+</body>
+
+</html>

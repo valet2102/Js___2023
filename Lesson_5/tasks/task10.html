@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 10</h1>
+    <p>
+        Знайти суму всіх непарних чисел, що знаходяться між заданими користувачем числами.
+
+
+
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        let userFirstRangeNumber = parseInt(prompt("Введите первое число", 0))
+        let userSecondRangeNumber = parseInt(prompt("Введите второе число", 0))
+
+        let sumOfUnpairedNumbers = 0
+
+        let minUserRangeNumber
+        let maxUserRangeNumber
+        if (userFirstRangeNumber == userSecondRangeNumber)
+            minUserRangeNumber = maxUserRangeNumber = userFirstRangeNumber
+        else if (userFirstRangeNumber > userSecondRangeNumber) {
+            minUserRangeNumber = userSecondRangeNumber
+            maxUserRangeNumber = userFirstRangeNumber
+        }
+        else {
+            minUserRangeNumber = userFirstRangeNumber
+            maxUserRangeNumber = userSecondRangeNumber
+        }
+
+
+
+
+
+        for (let i = minUserRangeNumber; i <= maxUserRangeNumber; i++) {
+            if (i % 2 == 1 || i % 2 == -1) {
+                document.write(`Number: ${i} <br>`)
+                sumOfUnpairedNumbers += i
+            }
+        }
+
+        document.write(`<hr>Cумма непарных чисел в дипазоне от ${minUserRangeNumber} до  ${maxUserRangeNumber}  равна : ${sumOfUnpairedNumbers}`)
+
+        //2.Знаходимо результат
+        //3.Виводимо результа
+
+
+
+
+    </script>
+</body>
+
+</html>

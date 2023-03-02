@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+    <title>Task 13</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 13</h1>
+    <p>
+        Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів
+        користувач намагається потопити корабель.
+
+
+    </p>
+    <script>
+        const widthField = parseInt(prompt("Введите размер поля по ширине (ось X)"))
+        const heighField = parseInt(prompt("Введите размер поля по высоте (ось Y)"))
+        const numberOfShells = parseInt(prompt("Введите количество снарядов"))
+
+        const boatPositionX = 1 + Math.floor(Math.random() * widthField)
+        const boatPositionY = 1 + Math.floor(Math.random() * heighField)
+
+
+        let gameResult = "Вы не смогли потопить корабль и проиграли("
+        for (let i = 1; i <= numberOfShells; i++) {
+            let shootPositionX = parseInt(prompt(`Введите точку выстрела по оси Х (от 1 до ${widthField})`))
+            let shootPositionY = parseInt(prompt(`Введите точку выстрела по оси Y (от 1 до ${heighField})`))
+            if (shootPositionX === boatPositionX && shootPositionY === boatPositionY) {
+                gameResult = `Победа!!! Вы потопили корабль с ${i} попытки`
+                break
+            }
+            alert("Вы промахнулись, попробуйте еще раз)")
+
+        }
+
+        //       document.write(gameResult)
+
+        document.write(`
+            <table border="2px">
+
+
+				<tr>
+					<td>Результат вашей Игры</td>
+                    <td>${gameResult}</td>
+
+                   
+                    
+				</tr>
+                <tr>
+                    <td>Ширина и высота поля</td>
+                    <td>Ширина : ${widthField}   <br>Высота : ${heighField}</td>
+					
+				</tr>
+                <tr>
+					
+                    <td>Позиция корабля по оси Х и У</td>
+                    <td>Позиция по оси Х : ${boatPositionX}<br>Позиция по оси Y : ${boatPositionY}</td>
+				</tr>
+			</table>
+
+`)
+
+
+
+    </script>
+</body>
+
+</html>

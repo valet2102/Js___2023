@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
+    <title>Task 12</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 12</h1>
+    <p>
+        Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з
+        чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три
+        других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору
+        зображення за номером).
+
+
+
+
+    </p>
+    <script>
+        let firstPicture, secondPicture, thirdPicture
+        let firstPictureIndex, secondPictureIndex, thirdPictureIndex
+
+        // Присваеваем пременным картинку и индекс картинки
+        for (let i = 0; i < 3; i++) {
+            let randNumber = 1 + Math.floor(Math.random() * 4)
+            switch (i) {
+                case 0:
+                    firstPictureIndex = randNumber
+                    firstPicture = `<img src="../img/img${randNumber}.png">`
+                    break;
+                case 1:
+                    secondPictureIndex = randNumber
+                    secondPicture = `<img src="../img/img${randNumber}.png">`
+                    break;
+                case 2:
+                    thirdPictureIndex = randNumber
+                    thirdPicture = `<img src="../img/img${randNumber}.png">`
+                    break;
+
+            }
+        }
+        //Определяем выиграш
+        let userWin
+        if (firstPictureIndex === secondPictureIndex && secondPictureIndex === thirdPictureIndex) {
+            switch (firstPictureIndex) {
+                case 1:
+                    userWin = "Вы выиграли 100 грн."
+                    break;
+                case 2:
+                    userWin = "Вы выиграли 200 грн."
+                    break;
+                case 3:
+                    userWin = "Вы выиграли 500 грн."
+                    break;
+                case 4:
+                    userWin = "Вы выиграли 1000 грн."
+                    break;
+
+            }
+
+        }
+        else
+            userWin = "Вы проиграли , сегодня не ваш день("
+
+
+        document.write(`
+            <table border="2px">
+
+
+				<tr>
+					<td>Ваш виграш</td>
+                    <td>Результат прокрутки</td>
+				</tr>
+                <tr>
+                    <td>${userWin}</td>
+				
+					<td>${firstPicture}${secondPicture}${thirdPicture}</td>
+				</tr>
+			</table>
+
+
+
+
+
+
+`)
+
+
+    </script>
+</body>
+
+</html>
