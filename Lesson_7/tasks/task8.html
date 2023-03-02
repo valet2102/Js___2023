@@ -28,7 +28,7 @@
 
 
         function getBanner(imgSrc, title, link) {
-            const bannerImage = `<img src="${imgSrc}">`
+            const bannerImage = `<img src="${imgSrc}" alt="Google Image">`
             const bannerTitle = `<h1 style="position:absolute; top:0; left:40%; color:red; font-size:40px;">${title}</h1>`
 
             return `<a style="border:2px solid black; display:inline-block; position:relative;" href="${link}">${bannerImage}  ${bannerTitle}   </a> `
