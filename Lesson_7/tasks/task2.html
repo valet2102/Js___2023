@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 2</h1>
+    <p>
+        Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.
+
+    </p>
+    <script>
+        const userNumberOfWeek = parseInt(prompt("Введите номер дня недели ", 0))
+        function getWorkDay(weekNumber) {
+            let numberOfWeek = (weekNumber - 1) % 7 + 1
+
+            switch (numberOfWeek) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5: return "Work day"
+                case 6:
+                case 7: return "Weekend"
+
+                default: return "Not correct number of week!!!"
+            }
+
+        }
+
+        document.write(`Какой сейчас день в неделе? => ${getWorkDay(userNumberOfWeek)}`)
+
+
+
+    </script>
+</body>
+
+</html>

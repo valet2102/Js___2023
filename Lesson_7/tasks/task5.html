@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 5</h1>
+    <p>
+        Створити окремі функції, які переводять: <br>
+        1) Сантиметри у дюйми; <br>
+        2) Кілограми у фунти; <br>
+        3) Кілометри у милі. <br>
+    </p>
+    <hr>
+    <script>
+        const userQuantityOfCentimeters = parseInt(prompt("Введите длину в сантиметрах  ", 0))
+        const userQuantityOfKilograms = parseInt(prompt("Введите длину в килограмах  ", 0))
+        const userQuantityOfKilometers = parseInt(prompt("Введите длину в километрах  ", 0))
+
+
+        function getInchFromCentimeters(number) {
+            return (number / 2.54).toFixed(2)
+        }
+
+        function getFuntFromKilograms(number) {
+            return (number * 2, 205).toFixed(2)
+        }
+
+        function getMileFromKilometers(number) {
+            return (number / 1.609).toFixed(2)
+        }
+
+        let task1 = getInchFromCentimeters(userQuantityOfCentimeters)
+        let task2 = getFuntFromKilograms(userQuantityOfKilograms)
+        let task3 = getMileFromKilometers(userQuantityOfKilometers)
+
+        document.write(`
+                <table border="1px solid">
+                    <tr>
+                        <td>Задача 5. Створити окремі функції, які переводять: <br>
+                            1)Сантиметри у дюйми;<br>
+                                2)Кілограми у фунти;<br>
+                                    3)Кілометри у милі.
+                        </td>
+                     </tr>
+                     <tr>
+                            <td>Числа користувача</td>
+                           <td>Сантиметры: ${userQuantityOfCentimeters}<br> Килограмы: ${userQuantityOfKilograms}<br> Километры: ${userQuantityOfKilometers} </td>
+                     </tr>
+                                  <tr>
+                                        <td>Сантиметри у дюйми;</td>
+                                        <td>${task1}</td>
+                                  </tr>
+                                  <tr>
+                                       <td>Кілограми у фунти;</td>
+                                       <td>${task2}</td>
+                                  </tr>
+                                  <tr>
+                                            <td>Кілометри у милі.</td>
+                                            <td>${task3}</td>
+                                   </tr>
+
+                                    </table>
+		`);
+
+
+    </script>
+</body>
+
+</html>

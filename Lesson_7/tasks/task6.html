@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 6</h1>
+    <p>
+        Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим
+        фіксованим повідомленням).
+
+
+
+    </p>
+    <hr>
+    <script>
+        const userWidth = parseInt(prompt("Введите ширину таблицы  ", 0))
+        const userHeight = parseInt(prompt("Введите высоту таблицы  ", 0))
+        const userText = prompt("Введите текст который будет в таблице  ", 0)
+
+
+        // Виводимо таблицю
+        getTable(userWidth, userHeight, userText)
+
+
+        // Створюємо функцію що формує таблицю
+        function getTable(width, height, text) {
+            document.write(`<table border="2px solid darkgreen">`)
+            for (let row = 0; row < height; row++) {
+                document.write(`<tr>`)
+                for (let column = 0; column < width; column++) {
+                    document.write(`<td>${text}  </td> `)
+                }
+                document.write(`</tr>`)
+            }
+            document.write(`</table> <br>`)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

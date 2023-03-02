@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 3</h1>
+    <p>
+        Створити окремі функції, які для 4 чисел знаходять:
+        <br>
+        1)суму;
+        <br>
+        2)добуток;
+        <br>
+        3)середнє арифметичне;
+        <br>
+        4)мінімальне значення.
+
+
+    </p>
+    <hr>
+    <script>
+        //Функция для запроса номера
+        function getUserNumber(number) {
+            return parseInt(prompt(`Введите ${1}) число`, 0))
+
+        }
+        //Функция для суммы
+        function getSum(a, b, c, d) {
+            let sum = a + b + c + d
+            return sum
+        }
+        //Функция для умножения
+        function getMultiplication(a, b, c, d) {
+            let mult = a * b * c * d
+            return mult
+        }
+        //Функция для среднего арефметического
+        function getAvarage(a, b, c, d) {
+            let avarage = getSum(a, b, c, d) / 4
+            return avarage
+        }
+        //Функция для минимального числа
+        function getMin(a, b, c, d) {
+            let minNumber = Infinity
+
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] < minNumber)
+                    minNumber = arguments[i]
+            }
+
+
+            // if (a < b && a < c && a < d)
+            //     minNumber = a
+            // else if (b < a && b < c && b < d)
+            //     minNumber = b
+            // else if (c < a && c < b && c < d)
+            //     minNumber = c
+            // else if (d < a && d < c && d < b)
+            //     minNumber = b
+
+            return minNumber
+
+        }
+
+
+        const userNumberFirst = getUserNumber(1)
+        const userNumberSecond = getUserNumber(2)
+        const userNumberThird = getUserNumber(3)
+        const userNumberFourth = getUserNumber(4)
+
+
+
+        let task1 = getSum(userNumberFirst, userNumberSecond, userNumberThird, userNumberFourth)
+        let task2 = getMultiplication(userNumberFirst, userNumberSecond, userNumberThird, userNumberFourth)
+        let task3 = getAvarage(userNumberFirst, userNumberSecond, userNumberThird, userNumberFourth)
+        let task4 = getMin(userNumberFirst, userNumberSecond, userNumberThird, userNumberFourth)
+
+
+
+        document.write(`
+                <table border="1px solid">
+                    <tr>
+                        <td>Задача 4. Створити окремі функції, які для 4 чисел знаходять: <br>
+                            1)суму;<br>
+                                2)добуток;<br>
+                                    3)середнє арифметичне;<br>
+                                        4)мінімальне значення.</td>
+                                </tr>
+                                <tr>
+                                    <td>Числа користувача</td>
+                                    <td>a: ${userNumberFirst}<br> b: ${userNumberSecond}<br> c: ${userNumberThird}<br> d: ${userNumberFourth}</td>
+                                    </tr>
+                                        <tr>
+                                            <td>Сума</td>
+                                            <td>${userNumberFirst} + ${userNumberSecond} + ${userNumberThird} + ${userNumberFourth} = ${task1}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Добуток</td>
+                                            <td>${userNumberFirst} * ${userNumberSecond} * ${userNumberThird} * ${userNumberFourth} = ${task2}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cереднє арифметичне</td>
+                                            <td>(${userNumberFirst} + ${userNumberSecond} + ${userNumberThird} + ${userNumberFourth}) / 4 = ${task3}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Мінімальне значення</td>
+                                            <td>${userNumberFirst} | ${userNumberSecond} | ${userNumberThird} | ${userNumberFourth} = ${task4}</td>
+                                        </tr>
+                                    </table>
+		`);
+
+
+
+
+    </script>
+</body>
+
+</html>

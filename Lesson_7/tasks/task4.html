@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 4</h1>
+    <p>
+        . Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних,
+        кількість додатних, кількість більших за 100.
+
+
+
+    </p>
+    <hr>
+    <script>
+
+
+
+
+        const userNumberFirst = getUserNumber(1)
+        const userNumberSecond = getUserNumber(2)
+        const userNumberThird = getUserNumber(3)
+        let resultOfTasks = getThreeResult(userNumberFirst, userNumberSecond, userNumberThird)
+
+
+        //Функция для запроса номера
+        function getUserNumber(number) {
+            return parseInt(prompt(`Введите ${1}) число`, 0))
+
+        }
+
+        function getThreeResult(a, b, c) {
+            let result = "1)Quantity of double number => " + getQuantityOfDoubleNumber(a, b, c)
+            result += "<br>2)Quantity of positive number => " + getQuantityOfPositiveNumber(a, b, c)
+            result += "<br>3)Quantity of number more then 100 => " + getQuantityMoreHundred(a, b, c)
+            return result
+        }
+
+
+
+        function getQuantityOfDoubleNumber(a, b, c) {
+            let quantityOfNumbers = 0
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] % 2 === 0 || arguments[i] % 2 === -0)
+                    quantityOfNumbers++
+            }
+            return quantityOfNumbers
+        }
+
+        function getQuantityOfPositiveNumber(a, b, c) {
+            let quantityOfNumbers = 0
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > 0)
+                    quantityOfNumbers++
+            }
+            return quantityOfNumbers
+        }
+
+        function getQuantityMoreHundred(a, b, c) {
+            let quantityOfNumbers = 0
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > 100)
+                    quantityOfNumbers++
+            }
+            return quantityOfNumbers
+        }
+
+
+
+
+
+
+        document.write(`Введеные числа ${userNumberFirst}, ${userNumberSecond}, ${userNumberThird}<br>`)
+        document.write(`${resultOfTasks}`)
+
+
+
+    </script>
+</body>
+
+</html>

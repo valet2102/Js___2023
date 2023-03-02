@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 10</h1>
+    <p>
+        Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє значення
+        для додатних показів температури.
+
+
+
+
+    </p>
+    <script>
+        //1.Вводимо необхідні дані
+        const userQuantityOfTemperature = parseInt(prompt("Введите количество показателей температуры", 0))
+
+        let counterOfPositiveTemperature = 0
+        let sumOfPositiveTemperature = 0
+        let avarageTemperature = getResult()
+
+
+        function getResult() {
+            for (let i = 1; i <= userQuantityOfTemperature; i++) {
+                getNegativeTemperature(i)
+            }
+            return getAvarageTemperature(sumOfPositiveTemperature, counterOfPositiveTemperature)
+
+        }
+
+
+
+        function getNegativeTemperature(temp) {
+            const userTemperature = parseInt(prompt(`Введите ${temp}) показатель температуры`, 0))
+            if (userTemperature > 0) {
+                counterOfPositiveTemperature++
+                sumOfPositiveTemperature += userTemperature
+            }
+        }
+
+        function getAvarageTemperature(temp, quantity) {
+            return temp / quantity
+        }
+
+
+
+
+
+        document.write(`
+			<table border= 2px>
+				
+				<tr>
+					<td>Середня температура =></td>
+					<td>${avarageTemperature}</td>
+				</tr>
+			</table>
+		`)
+
+
+    </script>
+</body>
+
+</html>

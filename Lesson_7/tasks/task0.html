@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 0</h1>
+    <p> Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.
+
+
+    </p>
+    <hr>
+    <script>
+        //1.Вводимо необхідні дані та функцію
+        const userNumberOfMonth = parseInt(prompt("Введите номер месяца в году (1 - 12)", 0))
+
+        function getTimeOfYear(monthNumber) {
+            let timeOfYear
+            switch (monthNumber) {
+                case 1:
+                case 2:
+                case 12: timeOfYear = "Winter"
+                    break;
+                case 3:
+                case 4:
+                case 5: timeOfYear = "Spring"
+                    break;
+                case 6:
+                case 7:
+                case 8: timeOfYear = "Summer"
+                    break;
+                case 9:
+                case 10:
+                case 11: timeOfYear = "Autumn"
+                    break;
+                default: timeOfYear = "Not correct number of month!!!"
+            }
+            return timeOfYear
+        }
+
+
+
+        // function getTimeOfYear(monthNumber) {
+
+        //     switch (monthNumber) {
+        //         case 1:
+        //         case 2:
+        //         case 12: return "Winter"
+
+        //         case 3:
+        //         case 4:
+        //         case 5: return "Spring"
+
+        //         case 6:
+        //         case 7:
+        //         case 8: return "Summer"
+
+        //         case 9:
+        //         case 10:
+        //         case 11: return "Autumn"
+
+        //         default: return "Not correct number of month!!!"
+        //     }
+
+        // }
+
+
+
+
+        let userTimeOfYear = getTimeOfYear(userNumberOfMonth)
+
+        document.write(`Пора года введеная пользователем : ${userTimeOfYear}`)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to tasks</a>
+    <h1>Задача 8</h1>
+    <p>
+        Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо
+        при кліку на зображення (тег img повине знаходитись у середині тега a: <a> <img src=”шлях”> </a>
+
+
+
+
+    </p>
+    <script>
+
+        const image = "../img/Google.png"
+        const text = "Press on the banner)"
+        const link = "https://www.google.com.ua/?hl=ru"
+        const banner = getBanner(image, text, link)
+
+
+        function getBanner(imgSrc, title, link) {
+            const bannerImage = `<img src="${imgSrc}">`
+            const bannerTitle = `<h1 style="position:absolute; top:0; left:40%; color:red; font-size:40px;">${title}</h1>`
+
+            return `<a style="border:2px solid black; display:inline-block; position:relative;" href="${link}">${bannerImage}  ${bannerTitle}   </a> `
+        }
+
+        document.write(banner)
+
+
+
+    </script>
+</body>
+
+</html>
